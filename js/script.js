@@ -41,7 +41,7 @@ const search = {
   },
 
   filterSearch: (inputValue) => {
-    // If nothing is in the search box.
+    // If nothing is in the search box, defaults to page 1.
     if (inputValue === '') {
       errors.removeError();
       view.showPage(1);
@@ -68,6 +68,8 @@ const search = {
     }
   }
 }
+searchInput.addEventListener('keyup', search.searchFromInput);
+searchButton.addEventListener('click', search.searchFromButton);
 
 
 // Showing, appending and changing pages and page numbers.
@@ -89,9 +91,9 @@ const view = {
     })
   },
 
-  /* Generate, append, and add functionality to the pagination buttons.
-  Runs when the page first loads with the liItems array, and
-  is called when searching. */
+  // Generate, append, and add functionality to the pagination buttons.
+  // Runs when the page first loads with the liItems array, and
+  // is called when searching.
   appendPageLinks: (itemsArr) => {
     // Removes any page buttons that were there.
     if (div.children) {
@@ -152,9 +154,6 @@ const errors = {
     }
   }
 }
-
-searchInput.addEventListener('keyup', search.searchFromInput);
-searchButton.addEventListener('click', search.searchFromButton);
 
 
 // Shows page 1 and buttons when page is first loaded.
