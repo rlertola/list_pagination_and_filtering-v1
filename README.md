@@ -1,8 +1,9 @@
 
 # Treehouse Techdegree project 2 - List Filter and Pagination
 
-### This project shows a list of students with page numbers at the bottom, and a
-search box added at the top.
+https://rlertola.github.io/list_pagination_and_filtering-v1/
+
+### This project shows a list of students with page numbers at the bottom, and a search box added at the top.
 
 ### Functionality
 - Dynamic search filter: filters search results per letter.
